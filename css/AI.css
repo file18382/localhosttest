@@ -1,0 +1,68 @@
+.ai {
+    --inner-x: 25;
+    --inner-y: 25;
+    --inner-w: calc(var(--bg-widthPhone) - 50);
+    --inner-h: calc(var(--bg-heightPhone)- 50);
+    --inner-r: calc(41 / var(--bg-widthPhone) - 25);
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+
+    & .ai-box {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        filter: blur(16px);
+    }
+
+    .ai-box::before {
+        content: "";
+        position: absolute;
+        inset: -25px;
+
+        /* độ dày viền */
+        padding: 40px;
+
+        /* bo góc quyết định hình */
+        border-radius: 46px;
+
+        background: conic-gradient(from var(--angle), #ff5f6d, #ffc371, #47ffd2, #5f9cff, #c77dff, #ff5f6d);
+
+        /* ===== SUBTLE EDGE DISTORT ===== */
+        -webkit-mask:
+    /* khoét giữa */ linear-gradient(#000 0 0) content-box,
+            /* cạnh trái */ radial-gradient(180% 120% at 0% 50%, #000 66%, transparent 69%),
+            /* cạnh phải */ radial-gradient(180% 120% at 100% 50%, #000 66%, transparent 69%),
+            /* cạnh trên */ radial-gradient(120% 180% at 50% 0%, #000 66%, transparent 69%),
+            /* cạnh dưới */ radial-gradient(120% 180% at 50% 100%, #000 66%, transparent 69%);
+
+        -webkit-mask-composite: xor, destination-in, destination-in, destination-in, destination-in;
+
+        animation: spin 4s linear infinite, edgeDrift 14s ease-in-out infinite;
+    }
+
+    z-index: 100000;
+}
+@keyframes spin {
+    to {
+        --angle: 360deg;
+    }
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes edgeDrift {
+    0%,
+    100% {
+        -webkit-mask-position: 0 0, 0% 50%, 100% 50%, 50% 0%, 50% 100%;
+    }
+    50% {
+        -webkit-mask-position: 0 0, 2% 51%, 98% 49%, 49% 2%, 51% 98%;
+    }
+}

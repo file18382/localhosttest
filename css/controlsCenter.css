@@ -1,0 +1,225 @@
+.lpControlCenterControlsCenter {
+    position: absolute;
+    display: flex;
+    height: calc(1px * var(--bg-heightPhone));
+    width: calc(1px * var(--bg-widthPhone));
+    z-index: 10000;
+    pointer-events: none;
+    justify-content: end;
+}
+.control-centerControlsCenter {
+    width: 265px;
+    height: 550px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 60px;
+    gap: 10px;
+    scale: 0.85;
+    transition: transform 0.45s, row-gap 0.2s, margin-top 0.35s;
+    row-gap: 23px;
+    transform: translateX(0px) translateY(calc(0.15px * var(--bg-heightPhone)));
+    pointer-events: none;
+}
+.lpControlCenterControlsCenter svg {
+    transition: all 0.1s;
+}
+.lpControlCenterControlsCenter.open ~ #statusBar > #statusBarRight {
+    transition: backdrop-filter calc(0.6s * var(--bg-speedAnimation)), background calc(0.6s * var(--bg-speedAnimation));
+    position: absolute;
+    height: calc(1px * var(--bg-heightPhone));
+    width: calc(1px * var(--bg-widthPhone));
+    backdrop-filter: blur(10px);
+    background: rgb(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.lpControlCenterControlsCenter.open .itemControlsCenter {
+    pointer-events: all;
+}
+
+.itemControlsCenter {
+    position: relative;
+    background: color-mix(
+        in srgb,
+        #fff calc(10% + var(--bg-liquidOpacity)),
+        transparent calc(100% - var(--bg-liquidOpacity))
+    );
+    height: 35.69px;
+    width: 35.69px;
+    border-radius: calc(var(--bg-borderRadiusSys) * 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    transition: transform 0.3s, scale 0.3s, box-shadow 0.3s, background-color 0.3s;
+    color: #1a1a1a;
+    font-family: "Noto sans", sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    scale: 1;
+    box-shadow: inset 1px 1px 5px rgba(255, 255, 255, 0.5), inset 0 0 0 rgba(255, 255, 255, 0.4);
+    border: solid 1px rgba(255, 255, 255, 0.4);
+    padding: 10px;
+}
+
+.itemControlsCenter svg {
+    font-size: 22px;
+    fill: rgb(10, 10, 10);
+    height: 24px !important;
+    width: 26px !important;
+}
+.itemControlsCenter:active {
+    transition: all 0.2s, box-shadow 0.1s !important;
+    scale: 0.91;
+    box-shadow: inset 1px 1px 5px rgba(255, 255, 255, 0.4), inset 0 0 0 rgba(255, 255, 255, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.7), inset 0 0 0 rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.6);
+}
+.phone.noLiquid .itemControlsCenter {
+    box-shadow: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.itemControlsCenter.activeControlsCenter {
+    background: rgba(0, 102, 255, 0.9) !important;
+}
+.itemControlsCenter.activeControlsCenter svg {
+    fill: white;
+}
+
+.musicControlsCenter {
+    grid-column: span 2;
+    grid-row: span 2;
+    width: 103px;
+    height: 118.5px;
+}
+
+.wifiControlsCenter,
+.focusControlsCenter,
+.connectControlsCenter {
+    grid-column: span 2;
+    grid-row: span 1;
+    gap: 25px;
+    width: 103px;
+}
+
+.volumeControlsCenter,
+.brightnessControlsCenter {
+    grid-column: span 1;
+    grid-row: span 2;
+    cursor: grab;
+    height: 118.5px;
+}
+.volumeControlsCenter svg {
+    fill: rgba(0, 102, 255, 1) !important;
+}
+.brightnessControlsCenter svg {
+    fill: orange !important;
+}
+
+.volumeControlsCenter:active,
+.brightnessControlsCenter:active {
+    scale: 1;
+}
+.musicControlsCenter:active {
+    scale: 0.93;
+}
+
+.sliderControlsCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.slider-innerControlsCenter {
+    position: absolute;
+    background: white;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: end;
+    display: flex;
+    bottom: 0;
+}
+.slider-innerControlsCenter.volumeControlsCenter {
+    height: 100%;
+}
+.brightnessControlsCenter .slider-innerControlsCenter {
+    background: white;
+}
+.bottom_textControlsCenter {
+    position: absolute;
+    transform: translateY(38px);
+    font-family: "Noto sans", sans-serif;
+    font-size: 11px;
+    width: 100%;
+    white-space: nowrap;
+    mix-blend-mode: difference;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#controlCenterID1ControlsCenter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 0;
+    align-content: start;
+}
+#box_musicControlsCenter {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    background: rgba(23, 23, 23, 0.2);
+    justify-content: center;
+    align-items: center;
+    border-radius: calc(var(--bg-borderRadiusSys) * 0.9 - 10px);
+}
+#img_musicControlsCenter {
+    background: none no-repeat center center;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: calc(var(--bg-borderRadiusSys) * 0.9 - 10px);
+    transition: background 0.2s;
+}
+#decor_musicControlsCenter {
+    display: flex;
+    height: calc(100% - 8px);
+    width: calc(100% - 5px);
+    justify-content: end;
+    margin-left: 3px;
+}
+#music_textControlsCenter {
+    color: rgb(10, 10, 10);
+    font-family: "Noto sans", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    height: 20px;
+    margin-left: 5px;
+    width: 90%;
+    grid-column: 1 / span 2;
+    text-align: left;
+    height: 35px;
+    align-content: end;
+}
+.controls_music3 {
+    display: grid;
+    grid-column: 1 / span 2;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 35px;
+}
+.controls_music3 div {
+    align-content: end;
+}
+
+.controls_music svg:active,
+.controls_music2 svg:active,
+.controls_music3 svg:active {
+    scale: 0.7;
+    filter: blur(5px);
+}
