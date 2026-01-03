@@ -3,7 +3,7 @@
     aspect-ratio: 41 / 28;
     max-width: 350px;
     border-radius: 17px;
-    background: url("/originData/OriginOS6Logo.png") no-repeat center center/cover;
+    background: url("https://quandz24-ui.github.io/OriginWEB/originData/OriginOS6Logo.png") no-repeat center center/cover;
     transition: scale 0.4s, opacity 0.15s;
 }
 #imageOceanWebpOriginOSLogoAbout:active {
@@ -15,7 +15,7 @@
     width: calc(100% - 40px);
     aspect-ratio: 1248 / 1848;
     max-width: 300px;
-    background: url("/originData/OriginOS6ocean.webp") no-repeat center center/cover;
+    background: url("https://quandz24-ui.github.io/OriginWEB/originData/OriginOS6ocean.webp") no-repeat center center/cover;
 }
 
 .aboutI4Item {
@@ -123,3 +123,4 @@
     height: auto;
     display: block;
 }
+
