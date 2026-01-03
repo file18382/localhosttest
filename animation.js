@@ -41,8 +41,8 @@ function addScriptForCloseApp(script) {
             appel.style.opacity = "";
             timeOutClosingApp[appel.id] = null;
             scrollAppScreen.style.pointerEvents = "";
-            removeScript(`/appData/${appel.id}/js/open/open.js`);
-            runScript(`/appData/${appel.id}/js/close/close.js`);
+            removeScript(`./appData/${appel.id}/js/open/open.js`);
+            runScript(`./appData/${appel.id}/js/close/close.js`);
         }, 800 * speed);
         scriptForCloseApp();
         closeApp = function () {
@@ -77,8 +77,8 @@ function addScriptForCloseApp(script) {
                 appel.style.opacity = "";
                 timeOutClosingApp[appel.id] = null;
                 scrollAppScreen.style.pointerEvents = "";
-                removeScript(`/appData/${appel.id}/js/open/open.js`);
-                runScript(`/appData/${appel.id}/js/close/close.js`);
+                removeScript(`./appData/${appel.id}/js/open/open.js`);
+                runScript(`./appData/${appel.id}/js/close/close.js`);
             }, 800 * speed);
         };
     };
@@ -109,8 +109,8 @@ function openApp(el) {
         timeOutOpeningApp[appel.id] = null;
     }, 400 * speed);
 
-    removeScript(`/appData/${currentOpeningEl.dataset.app}/js/close/close.js`);
-    runScript(`/appData/${currentOpeningEl.dataset.app}/js/open/open.js`);
+    removeScript(`./appData/${currentOpeningEl.dataset.app}/js/close/close.js`);
+    runScript(`./appData/${currentOpeningEl.dataset.app}/js/open/open.js`);
 }
 
 let scaleAllAppReverse = 1 / 0.86;
@@ -144,8 +144,8 @@ function closeApp() {
         appel.style.opacity = "";
         timeOutClosingApp[appel.id] = null;
         scrollAppScreen.style.pointerEvents = "";
-        removeScript(`/appData/${appel.id}/js/open/open.js`);
-        runScript(`/appData/${appel.id}/js/close/close.js`);
+        removeScript(`./appData/${appel.id}/js/open/open.js`);
+        runScript(`./appData/${appel.id}/js/close/close.js`);
     }, 700 * speed);
 }
 function closeAppToCenter() {
@@ -189,8 +189,8 @@ function closeAppToCenter() {
 
         appel.classList.remove("open");
         scrollAppScreen.style.pointerEvents = "";
-        removeScript(`/appData/${appel.id}/js/open/open.js`);
-        runScript(`/appData/${appel.id}/js/close/close.js`);
+        removeScript(`./appData/${appel.id}/js/open/open.js`);
+        runScript(`./appData/${appel.id}/js/close/close.js`);
 
         appel.anim.onfinish = null;
         appel.anim = null;
@@ -332,8 +332,8 @@ function closeAppToCenterWithScript(script) {
 
         appel.classList.remove("open");
         scrollAppScreen.style.pointerEvents = "";
-        removeScript(`/appData/${appel.id}/js/open/open.js`);
-        runScript(`/appData/${appel.id}/js/close/close.js`);
+        removeScript(`./appData/${appel.id}/js/open/open.js`);
+        runScript(`./appData/${appel.id}/js/close/close.js`);
 
         script();
     };
@@ -385,8 +385,8 @@ function closeAppToLeft() {
         appDisplay.style.display = "";
         appel.classList.remove("open");
         scrollAppScreen.style.pointerEvents = "";
-        removeScript(`/appData/${appel.id}/js/open/open.js`);
-        runScript(`/appData/${appel.id}/js/close/close.js`);
+        removeScript(`./appData/${appel.id}/js/open/open.js`);
+        runScript(`./appData/${appel.id}/js/close/close.js`);
 
         // Xoá animation đã xong
         delete appAnimations[appel.id];
@@ -449,8 +449,8 @@ function openAppByID(idApp) {
 
         const temp = currentOpeningEl;
         anim.onfinish = () => {
-            removeScript(`/appData/${temp.dataset.app}/js/close/close.js`);
-            runScript(`/appData/${temp.dataset.app}/js/open/open.js`);
+            removeScript(`./appData/${temp.dataset.app}/js/close/close.js`);
+            runScript(`./appData/${temp.dataset.app}/js/open/open.js`);
 
             // Xoá animation đã xong
             delete appAnimations[appel.id];
@@ -466,8 +466,8 @@ function openAppByID(idApp) {
 
             const temp = currentOpeningEl;
             anim.onfinish = () => {
-                removeScript(`/appData/${temp.dataset.app}/js/close/close.js`);
-                runScript(`/appData/${temp.dataset.app}/js/open/open.js`);
+                removeScript(`./appData/${temp.dataset.app}/js/close/close.js`);
+                runScript(`./appData/${temp.dataset.app}/js/open/open.js`);
 
                 // Xoá animation đã xong
                 delete appAnimations[appel.id];
@@ -535,8 +535,8 @@ function openAppByIDFromIslandWithScript(idApp, script) {
 
         const temp = currentOpeningEl;
         anim.onfinish = () => {
-            removeScript(`/appData/${temp.dataset.app}/js/close/close.js`);
-            runScript(`/appData/${temp.dataset.app}/js/open/open.js`);
+            removeScript(`./appData/${temp.dataset.app}/js/close/close.js`);
+            runScript(`./appData/${temp.dataset.app}/js/open/open.js`);
 
             // Xoá animation đã xong
             delete appAnimations[appel.id];
@@ -557,8 +557,8 @@ function openAppByIDFromIslandWithScript(idApp, script) {
             const temp = currentOpeningEl;
 
             timeOutOpeningApp[appel.id] = setTimeout(() => {
-                removeScript(`/appData/${temp.dataset.app}/js/close/close.js`);
-                runScript(`/appData/${temp.dataset.app}/js/open/open.js`);
+                removeScript(`./appData/${temp.dataset.app}/js/close/close.js`);
+                runScript(`./appData/${temp.dataset.app}/js/open/open.js`);
 
                 timeOutOpeningApp[appel.id] = null;
 
@@ -644,8 +644,8 @@ function openAppByIDFromCameraBtn(idApp) {
             // Xoá animation đã xong
             delete appAnimations[appel.id];
 
-            removeScript(`/appData/${temp.dataset.app}/js/close/close.js`);
-            runScript(`/appData/${temp.dataset.app}/js/open/open.js`);
+            removeScript(`./appData/${temp.dataset.app}/js/close/close.js`);
+            runScript(`./appData/${temp.dataset.app}/js/open/open.js`);
         };
     } else {
         if (alreadyOpen1) {
@@ -668,8 +668,8 @@ function openAppByIDFromCameraBtn(idApp) {
                 // Xoá animation đã xong
                 delete appAnimations[appel.id];
 
-                removeScript(`/appData/${temp.dataset.app}/js/close/close.js`);
-                runScript(`/appData/${temp.dataset.app}/js/open/open.js`);
+                removeScript(`./appData/${temp.dataset.app}/js/close/close.js`);
+                runScript(`./appData/${temp.dataset.app}/js/open/open.js`);
             }, 650);
 
             setTimeout(() => {
