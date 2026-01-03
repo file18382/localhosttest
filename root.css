@@ -8,8 +8,8 @@
     --bg-borderRadiusIcon: 17px;
     --bg-scaleIcon: 0.9;
 
-    --bg-wallpaperHome: url("../originData/wallpaper/wallpaper_2.png");
-    --bg-wallpaperLock: url("./originData/wallpaper/wallpaper_1.png");
+    --bg-wallpaperHome: url("https://quandz24-ui.github.io/OriginWEB/originData/wallpaper/wallpaper_2.png");
+    --bg-wallpaperLock: url("https://quandz24-ui.github.io/OriginWEB/originData/wallpaper/wallpaper_1.png");
 
     --bg-itemBackground: #171717;
     --bg-appbackground: #000000;

@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         //if (month === 0 && day >= 1 && day <= 3) {
         //    addNotification(
-        //        "./originData/iconPacks/origin_icon/calendar.png",
+        //        "https://quandz24-ui.github.io/OriginWEB/originData/iconPacks/origin_icon/calendar.png",
         //        "calendar",
         //        "Happy New Year " + now.getFullYear() + "! 🎉🎉🎉",
         //        "app_none4"
@@ -75,14 +75,14 @@ window.addEventListener("DOMContentLoaded", async () => {
     if (localStorage.getItem("version") !== "2000") {
         if (localStorage.getItem("version") == null) {
             addNotification(
-                "/originData/iconPacks/origin_icon/system_settings.png",
+                "https://quandz24-ui.github.io/OriginWEB/originData/iconPacks/origin_icon/system_settings.png",
                 "OriginWEB",
                 "Welcome to OriginWEB V2.0.00 for the first time",
                 "app_settings"
             );
         } else
             addNotification(
-                "/originData/iconPacks/origin_icon/system_settings.png",
+                "https://quandz24-ui.github.io/OriginWEB/originData/iconPacks/origin_icon/system_settings.png",
                 "OriginWEB",
                 "Welcome to OriginWEB V2.0.00",
                 "app_settings"
@@ -91,8 +91,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     }
 
     // load clock app
-    loadHTMLInto("#app_clock .appDisplay", "/appData/app_clock/html/html.html");
-    loadHTMLInto("#app_calculator .appDisplay", "/appData/app_calculator/html/html.html");
+    loadHTMLInto("#app_clock .appDisplay", "https://quandz24-ui.github.io/OriginWEB/appData/app_clock/html/html.html");
+    loadHTMLInto("#app_calculator .appDisplay", ".https://quandz24-ui.github.io/OriginWEB/appData/app_calculator/html/html.html");
     // === các function cần khi mở web ===
     loadAppLayout();
     cleanupEmptyScreens();

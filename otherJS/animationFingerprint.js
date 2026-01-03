@@ -67,7 +67,7 @@ function run_fingerprint_animation() {
     if (fingerBtnAnim._timer) clearTimeout(fingerBtnAnim._timer);
 
     function next() {
-        fingerBtnAnim.style.backgroundImage = `url("/originData/animationFingerprint/${ani_fingerprint_type}/kgd_fingerprint_element_${frame}.png")`;
+        fingerBtnAnim.style.backgroundImage = `url("https://quandz24-ui.github.io/OriginWEB/originData/animationFingerprint/${ani_fingerprint_type}/kgd_fingerprint_element_${frame}.png")`;
         if (frame < last) {
             frame++;
             fingerBtnAnim._timer = setTimeout(next, animationFP_time[ani_fingerprint_type]);
@@ -89,7 +89,7 @@ function run_fadein_animation() {
 
     function next() {
         el.style.backgroundImage =
-            el2.style.backgroundImage = `url("/originData/animationFingerprint/${ani_fadein_fingerprint_type}/kgd_osfingerprint_fadein_${frame}.png")`;
+            el2.style.backgroundImage = `url("https://quandz24-ui.github.io/OriginWEB/originData/animationFingerprint/${ani_fadein_fingerprint_type}/kgd_osfingerprint_fadein_${frame}.png")`;
 
         if (frame < last) {
             frame++;
@@ -114,7 +114,7 @@ function run_fadeout_animation() {
 
     function next() {
         el.style.backgroundImage =
-            el2.style.backgroundImage = `url("/originData/animationFingerprint/${ani_fadeout_fingerprint_type}/kgd_osfingerprint_fadeout_${frame}.png")`;
+            el2.style.backgroundImage = `url("https://quandz24-ui.github.io/OriginWEB/originData/animationFingerprint/${ani_fadeout_fingerprint_type}/kgd_osfingerprint_fadeout_${frame}.png")`;
 
         if (frame < last) {
             frame++;

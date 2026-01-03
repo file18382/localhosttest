@@ -281,7 +281,7 @@ island {
         width: 17px;
         height: 17px;
         border-radius: 17px;
-        background: url("../originData/phoneFrame/camera.png") 100%/100%;
+        background: url("https://quandz24-ui.github.io/OriginWEB/originData/phoneFrame/camera.png") 100%/100%;
         top: 12px;
         right: 50%;
         translate: 50%;
@@ -357,7 +357,7 @@ island {
             aspect-ratio: 1/1;
             overflow: hidden;
             border-radius: 5px;
-            background-image: url("../originData/OriginOS6Logo.png");
+            background-image: url("https://quandz24-ui.github.io/OriginWEB/originData/OriginOS6Logo.png");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -459,7 +459,7 @@ island {
             aspect-ratio: 1/1;
             overflow: hidden;
             border-radius: 5px;
-            background-image: url("../originData/OriginOS6Logo.png");
+            background-image: url("https://quandz24-ui.github.io/OriginWEB/originData/OriginOS6Logo.png");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -509,7 +509,7 @@ island {
             height: 70px;
             aspect-ratio: 1/1;
             overflow: hidden;
-            background-image: url("../originData/OriginOS6Logo.png");
+            background-image: url("https://quandz24-ui.github.io/OriginWEB/originData/OriginOS6Logo.png");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
