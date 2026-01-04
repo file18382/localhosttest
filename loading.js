@@ -92,7 +92,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     // load clock app
     loadHTMLInto("#app_clock .appDisplay", "https://quandz24-ui.github.io/OriginWEB/appData/app_clock/html/html.html");
-    loadHTMLInto("#app_calculator .appDisplay", ".https://quandz24-ui.github.io/OriginWEB/appData/app_calculator/html/html.html");
+    loadHTMLInto("#app_calculator .appDisplay", "https://quandz24-ui.github.io/OriginWEB/appData/app_calculator/html/html.html");
     // === các function cần khi mở web ===
     loadAppLayout();
     cleanupEmptyScreens();
@@ -370,3 +370,4 @@ function formatSize(bytes) {
     if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + " KB";
     return (bytes / 1024 / 1024).toFixed(2) + " MB";
 }
+
