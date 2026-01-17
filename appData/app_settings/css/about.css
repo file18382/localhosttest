@@ -2,7 +2,6 @@
     width: calc(100% - 20px);
     aspect-ratio: 41 / 28;
     max-width: 350px;
-    border-radius: 17px;
     background: url("https://quandz24-ui.github.io/OriginWEB/originData/OriginOS6Logo.png") no-repeat center center/cover;
     transition: scale 0.4s, opacity 0.15s;
 }
