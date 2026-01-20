@@ -1,11 +1,10 @@
 :root {
     --bg-widthPhone: 280;
     --bg-heightPhone: 617;
-    --bg-borderRadiusPhone: calc(41px * 1);
 
-    --bg-borderRadiusSys: 25px;
+    --bg-borderRadiusSys: 18px;
 
-    --bg-borderRadiusIcon: 17px;
+    --bg-borderRadiusIcon: 12px;
     --bg-scaleIcon: 0.9;
 
     --bg-wallpaperHome: url("https://quandz24-ui.github.io/OriginWEB/originData/wallpaper/wallpaper_2.png");
